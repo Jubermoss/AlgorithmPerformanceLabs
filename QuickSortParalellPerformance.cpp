@@ -159,18 +159,22 @@ void quicksort (void)
             A = (float *) malloc (n * sizeof(float));
             for (i = 0; i < n; i++)
             A[i] = erand48(xi);
+            
             /*
             print_float_array (A, n);
             */
+            
             unfinished[0].first = 0;
             unfinished[0].last = n-1;
             unfinished_index = 0;
             num_sorted = 0;
             #pragma omp parallel
             quicksort ();
+            
             /*
             print_float_array (A, n);
             */
+            
             if (verify_sorted (A, n)) printf ("Elements are sortedn");
             else printf ("ERROR: Elements are NOT sortedn");
             return 0;
