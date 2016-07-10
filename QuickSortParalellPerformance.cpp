@@ -51,6 +51,7 @@ int partition (int first, int last)
     return (i+1);
 }
 
+
 /* Function `seq_quicksort’ implements the traditional, recursive
 quicksort algorithm. It is called when we want a thread to be
 be responsible for sorting an entire sub-array. */
@@ -139,6 +140,7 @@ void quicksort (void)
                 if (A[i] > A[i+1]) return 0;
             return 1; }
         }
+        
         int main (int argc, char *argv[])
         {
             int    i;
